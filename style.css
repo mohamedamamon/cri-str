@@ -1,0 +1,90 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  margin: 0; padding: 0;
+  direction: rtl;
+  color: #222;
+}
+
+.hidden {
+  display: none;
+}
+
+.login-box, .admin-section, #playerDataAdmin, #playerDataUser, #storeItemsList, #storeItemsUser, #messagesBox, #postsList, #postsUser {
+  max-width: 500px;
+  margin: 20px auto;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;}
+
+.login-box input, .admin-section input, .admin-section textarea, #messageInput {
+  width: 100%;
+  margin: 8px 0;
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+.login-box button, button {
+  padding: 10px 15px;
+  background: #0052cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.error-msg {
+  color: red;
+ font-size: 0.9rem;
+  margin-top: 8px;
+  display: none;
+}
+
+header {
+  background: #0052cc;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player-card {
+  border: 1px solid #ddd;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.message-item {
+  margin-bottom: 6px;
+padding: 8px;
+  border-radius: 8px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.message-sent {
+  background: #cfe9ff;
+  text-align: right;
+  margin-left: auto;
+}
+
+.message-received {
+  background: #e2ffc7;
+  text-align: left;
+  margin-right: auto;
+}
+
+img.store-item-img, img.post-img {
+  max-width: 100px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
