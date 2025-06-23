@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cristal Star</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="loginBox" class="login-box">
+  <h1>تسجيل الدخول</h1>
+  <input type="text" id="userCode" placeholder="أدخل رمز المستخدم" />
+  <input type="password" id="userPassword" placeholder="أدخل كلمة المرور" />
+  <button onclick="checkPassword()">دخول</button>
+  <p id="errorMsg" class="error-msg" style="display:none;">الرمز أو كلمة المرور خاطئة، حاول مرة أخرى.</p>
+</div>
+
+<div id="app" class="hidden">
+  <header>
+    <h2>مرحباً <span id="username"></span></h2>
+    <button onclick="logout()">تسجيل خروج</button>
+  </header>
+
+  <section id="adminPanel" class="hidden">
+    <h3>لوحة المشرف</h3>
+<div class="admin-section">
+      <h4>إضافة لاعب جديد</h4>
+      <input type="text" id="newPlayerName" placeholder="اسم اللاعب" />
+      <input type="text" id="newPlayerCode" placeholder="كود اللاعب" />
+      <input type="password" id="newPlayerPassword" placeholder="كلمة مرور اللاعب" />
+      <button onclick="addPlayer()">إضافة لاعب</button>
+    </div>
+
+    <div class="admin-section">
+      <h4>إضافة عنصر جديد للاعبين</h4>
+      <input type="text" id="newFieldName" placeholder="اسم العنصر الجديد" />
+      <button onclick="addField()">إضافة عنصر</button>
+    </div>
+
+    <div class="admin-section">
+      <h4>قائمة اللاعبين</h4>
+      <div id="playerDataAdmin"></div>
+ </div>
+
+    <div class="admin-section">
+      <h4>إضافة منشور</h4>
+      <input type="text" id="postTitle" placeholder="عنوان المنشور" />
+      <input type="text" id="postImage" placeholder="رابط صورة المنشور (اختياري)" />
+      <textarea id="postContent" placeholder="محتوى المنشور"></textarea>
+      <button onclick="addPost()">نشر</button>
+    </div>
+
+    <div class="admin-section">
+      <h4>المنشورات الحالية</h4>
+      <div id="postsList"></div>
+    </div>
+
+    <div class="admin-section">
+      <h4>إضافة سلعة للمتجر</h4>
+      <input type="text" id="storeItemName" placeholder="اسم السلعة" />
+      <input type="number" id="storeItemPrice" placeholder="السعر" />
+      <input type="text" id="storeItemImage" placeholder="رابط صورة السلعة" />
+      <button onclick="addStoreItem()">إضافة سلعة</button>
+    </div>
+<div class="admin-section">
+      <h4>سلع المتجر</h4>
+      <div id="storeItemsList"></div>
+    </div>
+  </section>
+
+  <section id="playerPanel" class="hidden">
+    <h3>لوحة اللاعب</h3>
+
+    <div id="playerDataUser"></div>
+
+    <h4>المتجر</h4>
+    <div id="storeItemsUser"></div>
+
+    <h4>الرسائل</h4>
+ <div id="messagesBox"></div>
+    <input type="text" id="messageInput" placeholder="اكتب رسالة للمشرف..." />
+    <button onclick="sendMessage()">إرسال</button>
+
+    <h4>المنشورات</h4>
+    <div id="postsUser"></div>
+  </section>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
